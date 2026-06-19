@@ -15,7 +15,7 @@
 | Category | Done | Total |
 |---|---|---|
 | Arrays & Hashing | 8 | 9 |
-| Two Pointers | 0 | 5 |
+| Two Pointers | 5 | 5 |
 | Sliding Window | 0 | 6 |
 | Stack | 0 | 7 |
 | Binary Search | 0 | 7 |
@@ -32,7 +32,7 @@
 | Intervals | 0 | 6 |
 | Math & Geometry | 0 | 6 |
 | Bit Manipulation | 0 | 7 |
-| **Total** | **8** | **150** |
+| **Total** | **13** | **150** |
 
 ---
 
@@ -56,11 +56,11 @@
 
 | # | Problem | Difficulty | Status | Hint / One-Liner | Approaches | My Notes |
 |---|---------|-----------|--------|-------------------|------------|----------|
-| 1 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟢 Easy | ❌ | | | |
-| 2 | [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | 🟡 Medium | ❌ | | | |
-| 3 | [3Sum](https://leetcode.com/problems/3sum/) | 🟡 Medium | ❌ | | | |
-| 4 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟡 Medium | ❌ | | | |
-| 5 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🔴 Hard | ❌ | | | |
+| 1 | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) | 🟢 Easy | ✅ | `isalnum()` check + 2 pointers from both ends, compare | 2-ptr O(n) | Strip non-alphanum with isalnum, compare l/r moving inward |
+| 2 | [Two Sum II](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | 🟡 Medium | ✅ | Array is sorted → 2 pointers, move based on sum vs target | 2-ptr O(n) — no extra space needed | |
+| 3 | [3Sum](https://leetcode.com/problems/3sum/) | 🟡 Medium | ✅ | Sort first; fix i, use 2-ptr for j+k; skip duplicates at every level | Sort + 2-ptr O(n²) | Skip dups: after fixing i skip same vals; after finding triplet skip same j and k |
+| 4 | [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) | 🟡 Medium | ✅ | 2 ptrs at ends; always move the shorter side inward; track max area | 2-ptr O(n) | Moving shorter side is the only way to potentially increase area |
+| 5 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | 🔴 Hard | ✅ | Smaller of leftMax/rightMax decides water at that position; move that pointer inward | Prefix+Suffix arrays O(n) · 2-ptr O(n) space O(1) | 2-ptr: maintain leftMax & rightMax; whichever side is smaller, collect water there and advance |
 
 ---
 
